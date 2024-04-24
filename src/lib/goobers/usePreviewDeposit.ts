@@ -1,7 +1,7 @@
 import { BigNumber, Contract } from 'ethers';
 import { config } from '../core/config';
 import { useQuery } from 'react-query';
-import GooberABI from '..Goober.json';
+import GooberABI from '../constants/abis/Goober.json';
 import { Provider } from '@ethersproject/providers';
 import { Goober } from '../types/contracts';
 import { useProvider } from 'wagmi';
