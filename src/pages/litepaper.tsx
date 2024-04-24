@@ -10,6 +10,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import React from 'react';
 import ScrollingToCLink from '../components/UI/ScrollingToCLink';
+import Footer from '../components/Layout/Footer';
 
 const litepaperContent = `
 ## Abstract
@@ -565,6 +566,7 @@ const LitepaperPage: ExtendedNextPage<LitepaperPageProps> = ({ content }) => {
 						))}
 					</div>
 				</div>
+				<Footer />
 			</div>
 		</>
 	);
