@@ -13,8 +13,9 @@
 		"tailwind:build": "tailwind-config-viewer export ./tailwind-static",
 		"tailwind:view": "tailwind-config-viewer -o",
 		"generate:typechain": "typechain --target ethers-v5 --always-generate-overloads --discriminate-types --out-dir ./src/lib/types/contracts './src/lib/constants/abis/*.json'",
+		"generate:graphql:graph": "DOTENV_CONFIG_PATH=./src/.env graphql-codegen --config codegen.graph.yml -r dotenv/config",
 		"generate:graphql": "yarn generate:graphql:graph",
-		"generate": "yarn generate:typechain",
+		"generate": "yarn generate:typechain && yarn generate:graphql",
 		"postinstall": "yarn generate"
 	},
 	"dependencies": {
