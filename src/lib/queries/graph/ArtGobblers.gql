@@ -1,0 +1,14 @@
+query GetTopGooberBalances {
+	gooberBalances(orderBy: balance, orderDirection: desc, first: 12) {
+		id
+		balance
+	}
+}
+
+query GetGooberDayData {
+	gooberDayDatas(orderBy: date, orderDirection: desc) {
+		id
+		date
+		kDelta
+	}
+}
