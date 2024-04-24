@@ -13,12 +13,12 @@ module.exports = {
 				goober: {
 					semit: '#0000003d',
 					yelloop: '#F3FF8D',
-					goo: '#818CF8',
+					goo: '#56299E',
 					roo: '#F42E2E'
 				},
 				paradigm: {
 					gray: '#828C96',
-					green: '#818CF8',
+					green: '#56299E',
 					toc: '#744ec2'
 				},
 				gray: colors.neutral
