@@ -19,8 +19,6 @@ const Footer: React.FC = () => {
 						<a
 							className="transition-colors hover:text-[#818CF8] hover:underline hover:shadow-inherit"
 							href="/litepaper"
-							target="_blank"
-							rel="noreferrer"
 						>
 							Litepaper
 						</a>
