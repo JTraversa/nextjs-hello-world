@@ -1,4 +1,4 @@
-import { ROOT_WITH_PROTOCOL } from 'lib/constants/links';
+import { ROOT_WITH_PROTOCOL } from './lib/constants/links';
 import type { DefaultSeoProps as DefaultSeoPropsType } from 'next-seo';
 
 export const BaseUrl = ROOT_WITH_PROTOCOL;
