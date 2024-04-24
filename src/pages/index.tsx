@@ -15,7 +15,7 @@ const IndexPage: ExtendedNextPage = () => {
 			<div className="mx-auto">
 				<div className="mx-auto w-2/3">
 					<picture>
-						<img src="warlock-full.png" alt="" />
+						<img src="/warlock-full.png" alt="" />
 					</picture>
 				</div>
 			</div>
