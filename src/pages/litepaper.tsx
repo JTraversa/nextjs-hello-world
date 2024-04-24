@@ -400,12 +400,12 @@ Similar to Warlock's proprietary push window, there is also a parameterized wind
 
 An example (assuming the window for both fallback mechanisms is one minute):
 
-\begin{enumerate}
-\ 1. Warlock pushes the price feed for ETH/USD
-\ 2. 60 seconds passes – Enabling the first fallback mechanism
-\ 3. Unfortunately, the off-chain price feeds are all stale, preventing third party pushes.
-\ 4. 60 seconds passes – Enabling the second fallback mechanism
-\ 5. A third party now calls \`fallbackPush\`, syncing Warlock's price feed with a third-party like Chainlink 
+
+1. Warlock pushes the price feed for ETH/USD
+2. 60 seconds passes – Enabling the first fallback mechanism
+3. Unfortunately, the off-chain price feeds are all stale, preventing third party pushes.
+4. 60 seconds passes – Enabling the second fallback mechanism
+5. A third party now calls \`fallbackPush\`, syncing Warlock's price feed with a third-party like Chainlink 
 
 
 ## Conclusion

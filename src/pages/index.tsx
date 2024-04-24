@@ -10,7 +10,7 @@ const IndexPage: ExtendedNextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Goober</title>
+				<title>Warlock</title>
 			</Head>
 			<div className="mx-auto">
 				<div className="mx-auto w-2/3">
