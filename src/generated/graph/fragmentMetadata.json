@@ -1,0 +1,5 @@
+{
+	"possibleTypes": {
+		"Event": ["ERC721Transfer"]
+	}
+}
