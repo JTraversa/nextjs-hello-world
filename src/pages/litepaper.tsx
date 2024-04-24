@@ -11,6 +11,7 @@ import remarkMath from 'remark-math';
 import React from 'react';
 import ScrollingToCLink from '../components/UI/ScrollingToCLink';
 import Footer from '../components/Layout/Footer';
+import Navbar from '../components/Layout/Navbar';
 
 const litepaperContent = `
 ## Abstract
@@ -432,6 +433,7 @@ const LitepaperPage: ExtendedNextPage<LitepaperPageProps> = ({ content }) => {
 	return (
 		<>
 			<div className="w-screen bg-black pt-[4.6rem] text-white">
+				<Navbar />
 				<div className="litepaper__container">
 					<div className="mx-auto max-w-full sm:max-w-2xl">
 						<h1 className="mb-5 font-paradigm text-[2.75rem] font-normal leading-[1.3]">Warlock Litepaper</h1>

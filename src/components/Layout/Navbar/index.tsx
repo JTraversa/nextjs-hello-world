@@ -7,17 +7,15 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
 	return (
-		<header className="flex items-center rounded-3xl bg-gray-700 px-4 py-2">
-			<div className="flex-1">
-				<Link href="/">
-					<a>
-						<img className="w-28" src="/goober-thin.png" alt="Goober icon" />
-					</a>
-				</Link>
-			</div>
-			<div className="flex items-center gap-2">
-				<ConnectButton showBalance={false} />
-				<SlippageDropdown />
+		<header className="flex items-center rounded-3xl px-4 py-2">
+			<div className="flex items-center gap-2 left-100 ">
+				<div className="mx-48">
+					<Link href="/">
+						<a>
+							<img className="w-32" src="warlock-logo.png" alt="Warlock icon" />
+						</a>
+					</Link>
+				</div>
 			</div>
 		</header>
 	);
