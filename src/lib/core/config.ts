@@ -1,4 +1,4 @@
-import { ChainId } from 'lib/enums/ChainId';
+import { ChainId } from '../enums/ChainId';
 import * as z from 'zod';
 
 export const configSchema = z.object({
