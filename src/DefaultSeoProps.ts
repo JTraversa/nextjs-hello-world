@@ -1,13 +1,13 @@
-import { ROOT_WITH_PROTOCOL } from './lib/constants/links';
+import { ROOT_WITH_PROTOCOL } from 'lib/constants/links';
 import type { DefaultSeoProps as DefaultSeoPropsType } from 'next-seo';
 
 export const BaseUrl = ROOT_WITH_PROTOCOL;
 
-export const Title = '';
-export const Summary = '';
+export const Title = 'Warlock';
+export const Summary = 'Warlock -- A modular oracle and liquidation (OEV) system that increases the safety and profitability of blockchain based collateral management systems.';
 
 export const DefaultSeoProps: DefaultSeoPropsType = {
-	titleTemplate: `${Title} | %`,
+	titleTemplate: `${Title} | Realigning OEV`,
 	title: Title,
 	description: Summary,
 	canonical: BaseUrl,
@@ -18,10 +18,10 @@ export const DefaultSeoProps: DefaultSeoPropsType = {
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 		{ name: 'robots', content: 'archive,follow,imageindex,index,odp,snippet,translate' },
 		{ name: 'googlebot', content: 'index,follow' },
-		{ name: 'author', content: `` },
-		{ name: 'owner', content: `` },
-		{ name: 'designer', content: `` },
-		{ name: 'reply-to', content: '' },
+		{ name: 'author', content: "Warlock Labs" },
+		{ name: 'owner', content: "Warlock Labs" },
+		{ name: 'designer', content: "Warlock Labs" },
+		{ name: 'reply-to', content: "team@warlock.xyz" },
 		{ name: 'target', content: 'all' },
 		{ name: 'audience', content: 'all' },
 		{ name: 'coverage', content: 'Worldwide' },
@@ -34,8 +34,11 @@ export const DefaultSeoProps: DefaultSeoPropsType = {
 		{ name: 'application-name', content: Title },
 		{ name: 'revisit-after', content: '1 days' },
 
-		{ property: 'og:email', content: '' },
-
+		{ property: 'og:email', content: 'Team@Warlock.xyz' },
+		{ property: 'og:title', content: Title },
+		{ property: 'og:description', content: Summary },
+		{ property: 'og:image', content: "./splash.png" },
+		
 		{
 			name: 'twitter:title',
 			content: Title
@@ -46,7 +49,7 @@ export const DefaultSeoProps: DefaultSeoPropsType = {
 		},
 		{
 			name: 'twitter:image',
-			content: ''
+			content: './splash.png'
 		}
 	],
 	openGraph: {
@@ -67,8 +70,8 @@ export const DefaultSeoProps: DefaultSeoPropsType = {
 		}
 	},
 	twitter: {
-		handle: '',
-		site: '',
+		handle: 'warlock_xyz',
+		site: 'https://twitter.com/warlock_xyz',
 		cardType: 'summary_large_image'
 	}
 };
