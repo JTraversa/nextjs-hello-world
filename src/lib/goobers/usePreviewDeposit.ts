@@ -1,9 +1,9 @@
 import { BigNumber, Contract } from 'ethers';
-import { config } from 'lib/core/config';
+import { config } from '../core/config';
 import { useQuery } from 'react-query';
-import GooberABI from 'lib/constants/abis/Goober.json';
+import GooberABI from '..Goober.json';
 import { Provider } from '@ethersproject/providers';
-import { Goober } from 'lib/types/contracts';
+import { Goober } from '../types/contracts';
 import { useProvider } from 'wagmi';
 
 export function usePreviewDeposit(gooAmount: BigNumber, gobblerIDs: number[], provider: Provider) {

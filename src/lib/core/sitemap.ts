@@ -1,4 +1,4 @@
-import { ROOT_WITH_PROTOCOL } from 'lib/constants/links';
+import { ROOT_WITH_PROTOCOL } from '../constants/links';
 import sitemapGenerator from 'nextjs-sitemap-generator';
 import path from 'path';
 
