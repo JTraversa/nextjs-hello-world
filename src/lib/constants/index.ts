@@ -1,6 +1,6 @@
 import { BigNumber } from 'ethers';
-import { config } from 'lib/core/config';
-import { ChainId } from 'lib/enums/ChainId';
+import { config } from '../core/config';
+import { ChainId } from '../enums/ChainId';
 
 export const DEFAULT_CHAIN_ID: ChainId = config.defaultChainId as ChainId;
 export const ROOT = config.defaultSiteRoot;
