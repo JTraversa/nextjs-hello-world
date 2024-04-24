@@ -1,0 +1,59 @@
+schema:
+  - 'https://api.thegraph.com/subgraphs/name/thal0x/goober-mainnet'
+documents:
+  - 'src/lib/queries/graph/**/*.gql'
+hooks:
+  afterAllFileWrite:
+    - 'prettier --write'
+
+generates:
+  # Generates a full copy of the remote schema
+  src/generated/graph/schema.graphql:
+    plugins:
+      - schema-ast
+
+  # Generates fragment metadata needed by query cache
+  src/generated/graph/fragmentMetadata.json:
+    plugins:
+      - fragment-matcher
+
+  # Generates query and mutation documents
+  src/generated/graph/operations.ts:
+    plugins:
+      - typescript-document-nodes
+
+  # Generates query and mutation types
+  src/generated/graph/graphql-codegen-generated.ts:
+    plugins:
+      - add:
+          content: '/* tslint:disable *//* eslint-disable @typescript-eslint/consistent-type-definitions */'
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+      - add:
+          placement: append
+          content: 'export { fetcher }'
+    config:
+      # Use interfaces where possible, instead of type aliases
+      declarationKind: 'interface'
+
+      # Fetcher
+      fetcher: fetch
+
+      # Generate nullable fields as Maybe<T> (instead of { field?: Maybe<T> })
+      #avoidOptionals: true
+
+      # Use string literal types instead of enums, for compatibility with omni types
+      enumsAsTypes: true
+
+      # __typename is always fetched, so don’t mark it as optional in generated types
+      nonOptionalTypename: true
+
+      # Inline field selections in generated types, instead of using Pick<>
+      preResolveTypes: true
+
+      # Give scalars definite types, rather than 'any'
+      scalars:
+        BigInt: 'string'
+        BigDecimal: 'string'
+        Bytes: 'string'
